@@ -10,5 +10,9 @@
   "devDependencies": {
     "@azure/static-web-apps-cli": "^2.0.8",
     "parcel": "^2.14.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8"
   }
 }

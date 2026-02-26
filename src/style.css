@@ -1,8 +1,10 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 html {
   color-scheme: light dark;
   font-family: system-ui;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+}
+
+body {
+  margin: 0;
 }
