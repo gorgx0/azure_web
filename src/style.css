@@ -7,4 +7,96 @@ html {
 
 body {
   margin: 0;
+  background: linear-gradient(135deg, #e3f2fd, #d0f0fd, #e0f7fa);
+}
+
+/* Animation helpers */
+.transition-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Color enhancements */
+
+.navbar {
+  background: linear-gradient(90deg, #0ba360, #3cba92);
+}
+
+h1.display-4 {
+  background: linear-gradient(90deg, #ff512f, #f09819, #1fd1f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+}
+
+.badge.bg-primary {
+  background: #ff6f61 !important;
+}
+
+.badge.bg-success {
+  background: #00c9a7 !important;
+}
+
+.badge.bg-warning {
+  background: #ffb347 !important;
+}
+
+/* Table header color pop */
+.table-dark {
+  background: linear-gradient(90deg, #1f4037, #99f2c8);
+  color: #000;
+}
+
+/* Accordion color accent */
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  color: #000;
+}
+
+/* Alert enhancement */
+.alert-success {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  color: #000;
+  border: none;
 }
