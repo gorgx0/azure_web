@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel --no-cache",
     "build": "parcel build",
-    "deploy": "swa deploy dist --env production --deployment-token $SWA_DEPLOYMENT_TOKEN"
+    "deploy": "swa deploy dist --env production --deployment-token $SWA_DEPLOYMENT_TOKEN",
+    "deploy:preview": "swa deploy dist --env preview --deployment-token $SWA_DEPLOYMENT_TOKEN"
   },
   "devDependencies": {
     "@azure/static-web-apps-cli": "^2.0.8",

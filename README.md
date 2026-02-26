@@ -158,6 +158,32 @@ This keeps the token out of source control and prevents accidental leaks.
 
 ---
 
+### Deploy to Preview Environment
+
+Azure Static Web Apps also supports a **preview** environment.
+
+After building the project:
+
+```bash
+npm run build
+```
+
+Deploy to preview:
+
+```bash
+npm run deploy:preview
+```
+
+This runs:
+
+```
+swa deploy dist --env preview --deployment-token $SWA_DEPLOYMENT_TOKEN
+```
+
+Use preview deployments for staging, testing, or validating changes before promoting to production.
+
+---
+
 Manual deploy (without npm script):
 
 ```
