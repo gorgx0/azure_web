@@ -40,7 +40,7 @@ body {
 /* Color enhancements */
 
 .navbar {
-  background: linear-gradient(90deg, #0ba360, #3cba92);
+  background: linear-gradient(90deg, #0ba360, #1255a5);
 }
 
 h1.display-4 {
@@ -67,7 +67,7 @@ section {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, #ff512f, #dd2476);
+  background: linear-gradient(90deg, #2fff4e, #188a75);
 }
 
 .badge.bg-primary {
