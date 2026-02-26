@@ -20,7 +20,7 @@ Simple static web application built with:
 
 ## Install Dependencies
 
-```
+```bash
 npm install
 ```
 
@@ -30,7 +30,7 @@ npm install
 
 Start the Parcel dev server with hot module reloading:
 
-```
+```bash
 npm run start
 ```
 
@@ -48,7 +48,7 @@ The app will be available at the local URL printed in the terminal.
 
 Create an optimized production build:
 
-```
+```bash
 npm run build
 ```
 
@@ -118,13 +118,53 @@ Build the project:
 npm run build
 ```
 
-Deploy:
+---
+
+### Using a Deployment Token (Recommended for CLI Deployments)
+
+In the Azure Portal:
+
+1. Open your **Static Web App** resource.
+2. Go to **Deployment token**.
+3. Copy the token value.
+
+Store the token as an environment variable instead of hardcoding it.
+
+#### macOS / Linux
 
 ```
-swa deploy dist --env production
+export SWA_DEPLOYMENT_TOKEN="your_deployment_token_here"
 ```
 
-You may need a deployment token from the Azure Portal.
+#### Windows (PowerShell)
+
+```
+$env:SWA_DEPLOYMENT_TOKEN="your_deployment_token_here"
+```
+
+You can now deploy using the npm script:
+
+```
+npm run deploy
+```
+
+The script uses:
+
+```
+swa deploy dist --env production --deployment-token `$SWA_DEPLOYMENT_TOKEN`
+```
+
+This keeps the token out of source control and prevents accidental leaks.
+
+---
+
+Manual deploy (without npm script):
+
+```
+swa deploy dist --env production --deployment-token $SWA_DEPLOYMENT_TOKEN
+```
+
+Ensure the `SWA_DEPLOYMENT_TOKEN` environment variable is set before running the command.
 
 ---
 
